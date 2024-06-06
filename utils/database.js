@@ -9,7 +9,7 @@ export const connectToDB=async()=>{
         return;
     }
     try{
-        await mongoose.connect(process.env.MONGODB_URL,{
+        await mongoose.connect("mongodb+srv://infostream:infostream@cluster0.znumhyk.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0",{
             dbName:'share_prompt'
         })
         isConnected=true;
